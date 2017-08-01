@@ -9,20 +9,21 @@ def break_words(stuff):
 	
 def sort_words(words):
 	"""Sorts the words."""
-	
+	# sorted 
 	return sorted(words)
 
 def print_first_word(words):
 	
 	"""Print the first word after poping it off. """
 	
-	word = word.pop(0)
+	word = words.pop(0)
 	
 	print word
 	
 def print_last_word(words):
 	"""Print the last word after poping it off."""
 	
+	# 为什么是-1呀？
 	word = words.pop(-1)
 	
 	print word
@@ -32,6 +33,18 @@ def sort_sentence(sentence):
 	words = break_words(sentence)
 
 	return sort_words(words)
+	
+def print_first_and_last(sentence):
+	
+	words = break_words(sentence)
+	print_first_word(words)
+	print_last_word(words)
+	
+def print_first_and_last_sorted(sentence):
+	
+	words = sort_sentence(sentence)
+	print_first_word(words)
+	print_last_word(words)
 	
 
 
